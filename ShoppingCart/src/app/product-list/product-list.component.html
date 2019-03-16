@@ -11,7 +11,7 @@
           <img class="card-img-top" src={{product.img}} />
           </a>
       <button 
-          *ngIf="product.inCart"gi
+          *ngIf="product.inCart"
           class="cart-btn" 
           (click)="onClick(product.id)"
           [disabled]="product.inCart">
