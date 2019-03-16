@@ -1,0 +1,45 @@
+<div *ngIf="product"> <!--if got the product then start the process-->
+  <div class="container">
+    <div class="row">
+      <div class="col-10 mx-auto text-center text-slanted text-blue my-5">
+        <h1>{{product.title | uppercase}}</h1>
+      </div>
+      <div class="col-10 mx-auto col-md-6 my-3">
+          <img  src={{product.img}} class="img-fluid" alt="product" />
+      </div>
+      <div class="col-10 mx-auto col-md-6 my-3 text-capitalize">
+       <h2>model:{{product.title}} </h2><br />
+       <h4 class="text-title text-uppercase text-muted mt-3 mb-2">
+        made by: <span class="text-uppercase">{{product.company}}</span> 
+       </h4>
+       <h4 class="text-blue">
+         <strong>
+          price: <span>${{product.price}}</span>
+         </strong>
+       </h4>
+       <p class="text-capitalize font-weight-bold mt-3 mb-0">
+         some info about the product:
+       </p>
+       <p class="text-muted lead">{{product.info}}</p>
+       <div>
+         <button 
+          class="btn btn-warning
+          text-capitalize mx-2
+          btn-lg styled-button"
+          (click)="goBack()">back to products</button>
+         <button
+          class="btn btn-primary 
+          text-capitalize
+          btn-lg mx-2 styled-button"
+          (click)="onClick(product.id)"
+          [disabled]="product.inCart" 
+          >
+          {{product.inCart?'inCart':'add to Cart'}}
+         </button>
+       </div>
+      </div>
+    </div>
+   </div>
+  <div>
+ </div>
+</div>

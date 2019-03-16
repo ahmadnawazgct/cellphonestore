@@ -1,0 +1,53 @@
+:root{
+    --mainBlue:#2a2a72;
+    --LightBlue:#009ffd;
+    --mainWhite:#f3f3f3;
+    --mainDark:#232528;
+    --mainYellow:#ffa400;
+}
+h1{
+    text-align: center;   
+   }
+
+p {
+ font-size: 1.3rem;
+}
+span{
+    font-size: .9rem;
+}
+.fa-trash{
+    color:gold;
+    cursor: pointer;
+}
+.btn-black{
+    background: transparent;
+    text-transform: capitalize;
+    font-size: .9rem !important;
+    color: black;
+    border: 0.2rem solid gold;
+}
+.btn-black:hover{
+    background:black;
+    color:white;
+}
+.btn-outline-warning {
+    width: 180px;
+    height: 40px;
+    padding-bottom:15px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.btn-outline-warning:hover{
+    background: var(--mainYellow);
+    color:var(--mainBlue);
+    border-radius: 8px;
+}
+.btn-outline-warning:focus{
+    outline: none;
+    cursor: pointer;
+}
+
+
+

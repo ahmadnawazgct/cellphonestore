@@ -1,0 +1,16 @@
+:root{
+    --mainBlue:#2a2a72;
+    --LightBlue:#009ffd;
+    --mainWhite:#f3f3f3;
+    --mainDark:#232528;
+    --mainYellow:#ffa400;
+}
+
+.styled-button:hover{
+    background: var(--LightWhite);
+    color:var(--mainBlue);
+    border-radius: 8px;
+}
+.styled-button:focus{
+    outline: none;
+}

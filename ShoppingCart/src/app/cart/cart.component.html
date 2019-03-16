@@ -1,0 +1,69 @@
+
+<div>
+ <h1> {{(cart.length == 0)? 'Your Cart Is Currently Empty': 'Your Cart'}}</h1>
+</div>
+ <div class="container text-center d-none d-lg-block">
+   <div class="row">
+    <div class="col-10 mx-auto col-lg-2">
+     <p class="text-uppercase">product</p>
+     </div>
+     <div class="col-10 mx-auto col-lg-2">
+      <p class="text-uppercase">name of product</p>
+     </div>
+     <div class="col-10 mx-auto col-lg-2">
+      <p class="text-uppercase">price</p>
+     </div>
+     <div class="col-10 mx-auto col-lg-2">
+        <p class="text-uppercase">quantity</p>
+     </div>
+     <div class="col-10 mx-auto col-lg-2">
+      <p class="text-uppercase">remove</p>
+     </div>
+     <div class="col-10 mx-auto col-lg-2">
+      <p class="text-uppercase">total</p>
+     </div>
+   </div>
+  </div>  
+  <div class="container text-center">
+  <div class="row my-1 text-capitalize text-center" *ngFor="let item of cart">
+    <div class="col-10 mx-auto col-lg-2" >
+     <img src={{item.img}}  width="75px" height="90">
+    </div>
+      <div class="col-10 mx-auto col-lg-2">
+       <span class="d-lg-none">Product:</span>{{item.title}}
+      </div>
+      <div class="col-10 mx-auto col-lg-2" >
+       <span class="d-lg-none my-0">Price:</span>{{item.price}}
+      </div>
+      <div class="col-10 mx-auto col-lg-2 my-2 my-lg-0">
+       <div class="d-flex justify-content-center">
+          <span class="btn btn-black mx-1" (click)="onDecrement(item.id)">-</span>
+          <span class="btn btn-black mx-1">{{item.count}}</span>
+          <span class="btn btn-black mx-1" (click)="onIncrement(item.id)">+</span> 
+       </div> 
+     </div>
+      <div class="col-10 mx-auto col-lg-2">
+       <i class="fa fa-trash fa-2x link-icon" (click)="removeItem(item.id)"></i> 
+      </div> 
+      <div class="col-10 mx-auto col-lg-2">
+       <p>Item Total:{{item.total}}</p>
+      </div>  
+    </div>
+  </div>
+  <div *ngIf="cart.length > 0">
+      <div class="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right">
+         <button 
+          class="btn btn-outline-warning mx-2" (click)="clearCart()">
+          Clear Cart
+      </button>
+        <div>
+                <h4>Sub Total:${{total | number:'1.2-2'}} </h4>
+                <h4>Tax:${{tax | number:'1.2-2' }}</h4>
+                <h4>Grand Total:${{gTotal | number:'1.2-2'}}</h4> 
+        </div>        
+    </div>
+   <app-paypal></app-paypal>
+   
+  </div> 
+
+  
