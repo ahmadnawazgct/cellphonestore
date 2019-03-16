@@ -1,0 +1,22 @@
+<div *ngIf="data">
+   <div id="model">
+        <h4 class="center">Item Added To The Cart</h4>
+        <img class="center" src={{data.img}}  height="150" width="200"  class="img-fluid" alt="data" />
+        <h6 class="center">{{data.title}} </h6><br />
+        <h6 class="text-blue center">
+         price:${{data.price}}
+        </h6>
+
+       <button class="btn btn-primary btnStore text-capitalize btn-sm styled-button"
+       (click)="goBack()">
+        back to store
+       </button> 
+      
+        <a routerLink="/cart">
+        <button class="btn btn-primary styled-button btnCart text-capitalize
+        text-center btn-sm">Goto Cart
+        </button>
+        </a>
+      </div>
+    </div>
+

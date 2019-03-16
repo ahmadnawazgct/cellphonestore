@@ -1,0 +1,57 @@
+:root{
+    --mainBlue:#2a2a72;
+    --LightBlue:#009ffd;
+    --mainWhite:#f3f3f3;
+    --mainDark:#232528;
+    --mainYellow:#ffa400;
+}
+#model{
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    z-index: 999999;
+    position: absolute;
+    top:150px;
+    left:390px;
+    right:0;
+    bottom: 0;
+    background-color:gold;
+    
+}
+h4{
+    margin-top:20px;
+    margin-bottom: 10px;
+    color:black;
+}
+h6{
+    color:black;
+}
+img{
+    margin-left:70px;
+    margin-top: 20px;
+}
+.center {
+    text-align: center
+}
+.btnStore{
+    margin-top: 30px;
+    margin-left: 90px;
+}
+.btnCart{
+    margin-top: -60px;
+    margin-left: 190px;
+}  
+    
+.styled-button:hover{
+    background: var(--LightWhite);
+    color:var(--mainBlue);
+    border-radius: 8px;
+}
+.styled-button:focus{
+ 
+    outline: none;
+}
+.cart{
+    border-color: transparent;
+    transition: all 1s linear;
+}

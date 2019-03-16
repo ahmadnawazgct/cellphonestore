@@ -1,0 +1,33 @@
+.styled-button{
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    background:transparent;
+    border:0.05rem solid lightblue;
+    color: lightblue;
+    border-radius: 0.5rem;
+    padding:0.2rem 0.5rem;
+    cursor: pointer;
+    margin:0.2rem 0.5rem 0.2rem 0;
+    transform: all ease-in-out;
+}
+.styled-button:hover{
+    background: lightblue;
+    color:blue;
+}
+.styled-button:focus{
+    outline: none;
+}
+.styled-nav{
+    background:blue;
+}
+.nav-link{
+    color:var(--mainWhite)!important;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+i{
+    color: darkblue;
+    font-weight: bolder;
+    font-size: 40px;
+}
+     
